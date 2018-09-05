@@ -1,7 +1,7 @@
 
 // Declare global variables
 var computerChoices = ["krueger", "voorhees", "pennywise", "annabelle", "jigsaw", "samara", "ghostface", "chucky", "leatherface", "joker", "crumb", "myers"];
-var imgArr = ['///Users/kevinjones/gt/Word-Guess-Game/assets/images/krueger.png',
+var imgArr = ['assets/images/krueger.png',
 'assets/images/jason.jpg',
 'assets/images/penny.jpg',
 'assets/images/annabelle.jpg',
