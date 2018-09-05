@@ -2,17 +2,17 @@
 // Declare global variables
 var computerChoices = ["krueger", "voorhees", "pennywise", "annabelle", "jigsaw", "samara", "ghostface", "chucky", "leatherface", "joker", "crumb", "myers"];
 var imgArr = ['///Users/kevinjones/gt/Word-Guess-Game/assets/images/krueger.png',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/jason.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/penny.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/annabelle.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/jigsaw.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/samara.gif',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/ghost.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/chucky.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/leather.png',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/joker.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/crumb.jpg',
-'///Users/kevinjones/gt/Word-Guess-Game/assets/images/myers.jpg'];
+'assets/images/jason.jpg',
+'assets/images/penny.jpg',
+'assets/images/annabelle.jpg',
+'assets/images/jigsaw.jpg',
+'assets/images/samara.gif',
+'assets/images/ghost.jpg',
+'assets/images/chucky.jpg',
+'assets/images/leather.png',
+'assets/images/joker.jpg',
+'assets/images/crumb.jpg',
+'assets/images/myers.jpg'];
 var guessesArr = [];
 var isVisible = false;
 var hasWon = false;
@@ -111,7 +111,7 @@ var game = {
                 
                 for (var x = 0; x < keys.length; x++) {
                     if (computerPick === keys[x]) {
-                        caption = villains[keys[x]];
+                        caption = villains[keys[x]];     // use the current key & index to get the right villain
                     }
                 }
                 if (!isVisible){this.showImage();}
@@ -121,7 +121,6 @@ var game = {
                 // play audio
                 audioElement.play();
                 hasWon = true;
-                setTimeout(function(){ alert("You won!"); }, 1000);
             }
         }
     },
