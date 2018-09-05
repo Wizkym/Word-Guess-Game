@@ -1,0 +1,98 @@
+
+html body { 
+    background: url(../images/backdrop.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+  }
+
+#logo {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-family: 'Creepster', cursive;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#header {
+    width:auto;
+    text-align:center;
+    margin-left: 20px;
+}
+
+#description {
+    position: relative;
+    margin-top: 30px;
+}
+
+#gamecard {
+    margin-top: 20px;
+    background-color: black;
+    font-family: 'Life Savers', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px dashed #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    #gamecard {
+        font-size: 1em;
+        font-weight: normal;
+    }
+    #imagecard {
+        font-size: 1em;
+        margin-top: 0;
+    }
+    #imagecard.p{
+        background-color: black;
+    }
+    #villains {
+        margin-top: 0;
+    }
+}
+
+.mybtn {
+    margin-top: 10px;
+    background-color: black;
+    font-family: 'Life Savers', cursive;
+    font-weight: bold;
+}
+
+#imgcard {
+    visibility: hidden;
+    padding: 10px;
+    margin-top: 50px;
+    display: inline-block;
+    font-family: 'Tangerine', cursive;
+    font-size: 36px;
+}
+
+#current {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#villains {
+    margin-top: 40px;
+    max-width: 100%;
+    height: auto;
+}
+
