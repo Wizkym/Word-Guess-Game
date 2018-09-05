@@ -115,7 +115,6 @@ var game = {
                     }
                 }
                 if (!isVisible){this.showImage();}
-                console.log(caption);
                 $("#imgcard").append(caption);
 
                 // play audio
