@@ -63,6 +63,11 @@ var game = {
             this.goodGuess = true;
             document.querySelector("#guesses").innerHTML = guessesArr;  // print out that first guess
         }
+
+         // call the game.check function if the guess was accepted
+        if ((game.goodGuess) && (!hasWon)) {
+            game.letterCheck(newGuess);
+        }
     },
 
     newGame: function () {
@@ -144,19 +149,13 @@ var game = {
 
 // Give JavaScript a function to execute when onkeyup event fires.
 document.onkeyup = function(event) {
-    // assign new guess a variable
-    newGuess = event.key;
-
-    // run the game.push function to add the letter to the guess array & display it
     game.goodGuess = true;
 
-    if (!hasWon) {
-        game.push(newGuess);
+    // assign new guess a variable
+    if (event.keyCode >= 65 && event.keyCode <= 90 && (!hasWon)) { // checks if the guess is between a-z
+        newGuess = event.key;
+        game.push(newGuess);    // run the game.push function to add the letter to the guess array & display it
     }
-
-    // call the game.check function if the guess was accepted
-    if ((game.goodGuess) && (!hasWon)) {game.letterCheck(newGuess);}
-    
 }
 
 $(document).ready(function() {
