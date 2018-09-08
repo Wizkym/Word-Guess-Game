@@ -1,2 +1,2 @@
 # Word-Guess-Game
-A word guessing game
+A movie-themed word guessing game
