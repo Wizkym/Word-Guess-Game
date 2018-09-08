@@ -1,7 +1,8 @@
 
 // Declare global variables
-var computerChoices = ["krueger", "voorhees", "pennywise", "annabelle", "jigsaw", "samara", "ghostface", "chucky", "leatherface", "joker", "crumb", "myers"];
-var imgArr = ['assets/images/krueger.png',
+var computerChoices = ["pinhead","krueger", "voorhees", "pennywise", "annabelle", "jigsaw", "samara", "ghostface", "chucky", "leatherface", "joker", "crumb", "myers"];
+var imgArr = ['assets/images/pinhead.jpg',
+'assets/images/krueger.png',
 'assets/images/jason.jpg',
 'assets/images/penny.jpg',
 'assets/images/annabelle.jpg',
@@ -22,6 +23,7 @@ var newGuess;
 var computerPick;
 var caption;
 var villains = {
+    pinhead: "<p>Pinhead from Hellraiser (1987)</p>",
     krueger: "<p>Freddy Krueger from Nightmare on Elm Street (1984)</p>",
     voorhees: "<p>Jason Voorhees from Friday the 13<sup>th Franchise</sup</p>",
     pennywise: "<p>Pennywise from IT (2017)</p>",
@@ -70,7 +72,7 @@ var game = {
         }
     },
 
-    newGame: function () {
+    newGame: function () {            // resets the game
         computerPick = computerChoices[Math.floor(Math.random() * computerChoices.length)];
         console.log(computerPick);
         answerArr.length = 0;           // dump current answer array
@@ -92,7 +94,7 @@ var game = {
         hasWon = false;
     },
 
-    letterCheck: function (guess) {
+    letterCheck: function (guess) {     // compares the letter to the computerPick
         for (let x = 0; x < computerPick.length; x++) {
             // if the computerPick contains a letter equal to guess
             if (computerPick[x] === guess) { 
@@ -136,7 +138,7 @@ var game = {
                 index = x;
             }
         }
-        var img = $('<img />').attr({
+        $('<img />').attr({
             'id': 'villains',
             'src': imgArr[index],       // gets appropriate image from the image array
             'alt': 'Villain Image',
@@ -159,10 +161,9 @@ document.onkeyup = function(event) {
 }
 
 $(document).ready(function() {
-    // Call the showImage function to display the villain's image on screen
     $("#hint").on("click", function (){
         if (!isVisible){
-            game.showImage();
+            game.showImage();       // Call the showImage function to display the villain's image on the screen
         } else {
             $("#imgcard").css("visibility", "hidden");
             $('#imgcard').empty();
